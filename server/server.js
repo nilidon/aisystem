@@ -158,7 +158,7 @@ async function generateTextSilent(who) {
       const stream = await openai.chat.completions.create({
         model: 'gpt-5-nano',
         messages,
-        max_completion_tokens: 1024,
+        max_completion_tokens: 2048,
         stream: true,
       });
 
@@ -214,7 +214,7 @@ async function refreshSummary() {
           content: `Previous summary:\n${summary}\n\nRecent conversation:\n${transcript}\n\nWrite an updated summary.`,
         },
       ],
-      max_completion_tokens: 1024,
+      max_completion_tokens: 2048,
     });
 
     summary = res.choices[0].message.content.trim();
