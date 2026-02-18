@@ -1,0 +1,15 @@
+{
+  "name": "ai-lab-time-travel",
+  "version": "1.0.0",
+  "description": "24/7 AI conversation stream — two AIs building a logical model of time travel",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.82.0",
+    "ws": "^8.18.0"
+  }
+}

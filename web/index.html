@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>AI LAB — Time Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- click-to-start (enables audio autoplay) -->
+  <div id="start-screen">
+    <div class="start-content">
+      <div class="start-title">AI LAB</div>
+      <div class="start-sub">Click anywhere to start</div>
+    </div>
+  </div>
+
+  <!-- subtle background grid -->
+  <div class="bg-grid"></div>
+
+  <header id="header">
+    <div class="header-left">
+      <div class="live-pill">
+        <span class="live-dot"></span>
+        <span>LIVE</span>
+      </div>
+    </div>
+    <div class="header-center">
+      <h1 class="title">AI LAB</h1>
+      <p class="subtitle">Can two AIs solve time travel?</p>
+    </div>
+    <div class="header-right">
+      <span id="turn-counter"></span>
+    </div>
+  </header>
+
+  <div id="desc">Two AIs are trying to invent a logically consistent model of time travel — one proposes rules, the other finds flaws. This conversation never ends until they invent time traveling.</div>
+
+  <main id="stage">
+    <section id="panel-alpha" class="panel panel-left">
+      <div class="panel-accent accent-cyan"></div>
+      <div class="panel-inner">
+        <div class="panel-head">
+          <div class="avatar avatar-1">1</div>
+          <span class="ai-label">AI-1</span>
+        </div>
+        <div class="msg-wrap">
+          <div class="message" id="msg-alpha"></div>
+          <div class="state-overlay" id="overlay-alpha">
+            <img class="state-img" src="" alt="">
+            <span class="state-label"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel-beta" class="panel panel-right">
+      <div class="panel-accent accent-violet"></div>
+      <div class="panel-inner">
+        <div class="panel-head">
+          <div class="avatar avatar-2">2</div>
+          <span class="ai-label">AI-2</span>
+        </div>
+        <div class="msg-wrap">
+          <div class="message" id="msg-beta"></div>
+          <div class="state-overlay" id="overlay-beta">
+            <img class="state-img" src="" alt="">
+            <span class="state-label"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="bar">
+    <span class="conn-dot"></span>
+    <span id="status">Connecting</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
