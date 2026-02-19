@@ -156,9 +156,11 @@ async function generateTextSilent(who) {
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const stream = await openai.chat.completions.create({
-        model: 'gpt-5-nano',
+        model: 'gpt-4.1-nano',
         messages,
-        max_completion_tokens: 2048,
+        max_tokens: 200,
+        temperature: 0.9,
+        presence_penalty: 0.6,
         stream: true,
       });
 
@@ -200,7 +202,7 @@ async function refreshSummary() {
       .join('\n');
 
     const res = await openai.chat.completions.create({
-      model: 'gpt-5-nano',
+      model: 'gpt-4.1-nano',
       messages: [
         {
           role: 'system',
@@ -214,7 +216,8 @@ async function refreshSummary() {
           content: `Previous summary:\n${summary}\n\nRecent conversation:\n${transcript}\n\nWrite an updated summary.`,
         },
       ],
-      max_completion_tokens: 2048,
+      max_tokens: 300,
+      temperature: 0.5,
     });
 
     summary = res.choices[0].message.content.trim();
